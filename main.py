@@ -53,7 +53,7 @@ def analyze_and_report():
         macd_trend = "🔼 вверх" if macd > signal else "🔽 вниз"
 
         message = (
-            f"📊 BTC 1H Анализ
+           f"📊 BTC 1H Анализ"
 "
             f"🕒 Время: {datetime.utcnow().strftime('%Y-%m-%d %H:%M')} UTC
 "
