@@ -7,13 +7,12 @@ from telegram import Bot, InlineKeyboardMarkup, InlineKeyboardButton
 TOKEN = os.environ.get("TOKEN")
 CHAT_ID = os.environ.get("CHAT_ID")
 bot = Bot(token=TOKEN)
-
 def get_last_closed_candle_time():
-    utc_now = datetime.utcnow().replace(minute=0, second=0, microsecond=0, tzinfo=pytz.utc)
+    utc_now = datetime.utcnow().replace(minute=0, second=0, microsecond=0)
     last_closed = utc_now - timedelta(hours=1)
     kyiv_time = last_closed.astimezone(pytz.timezone('Europe/Kyiv'))
-    return last_closed, kyiv_time, last_closed.strftime('%Y%m%d_%H00')
-
+    report_id = last_closed.strftime("%Y-%m-%d_%H-%M")
+    return last_closed, kyiv_time, report_id
 def fetch_mock_data():
     return {
         "type": "Bullish engulfing",
