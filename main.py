@@ -63,5 +63,5 @@ def main():
     send_to_telegram(message)
     mark_sent(report_id)
 
-if __ name__ == "__main__":
+if __name__=="__main__":
      main()
