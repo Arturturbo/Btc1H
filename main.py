@@ -61,4 +61,4 @@ def main():
     message = format_report(data, utc_time, kyiv_time)
     send_to_telegram(message)
     mark_sent(report_id)
-if __name__ == "__main__":
+if __name__ == "__main__":    main()
