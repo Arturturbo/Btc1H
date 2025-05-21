@@ -54,13 +54,13 @@ def analyze_and_report():
 
         message = (
             f"📊 BTC 1H Анализ
-"
+
             f"🕒 Время: {datetime.utcnow().strftime('%Y-%m-%d %H:%M')} UTC
-"
+
             f"📈 RSI: {rsi:.2f}
-"
+
             f"📉 MACD: {macd:.4f} ({macd_trend})
-"
+
             f"📌 Рекомендация: {'Покупка' if rsi < 35 and macd > signal else 'Ожидание'}"
         )
 
